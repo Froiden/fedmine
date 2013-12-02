@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6, h7 { font-family: "Open Sans", Verdana, sans-serif; font
 
 #main { background: transparent; margin: 15px 15px 0px 15px; background-color: #fff; }
 
-#top-menu { font-size: 14px; padding: 0px 0px 0px 230px; height: 40px; background: #000 url(../images/logo.png) 10px 5px no-repeat;}
+#top-menu { font-size: 14px; padding: 0px 0px 0px 160px; height: 40px; background: #000 url(../images/logo.png) 10px 5px no-repeat;}
 #top-menu #loggedas { display: none; color: #FFF; padding: 11px 0 11px 5px; margin: 0; background-color: #E02222; border-left: 2px solid #DD4814; }
 #top-menu #account ul li a { background-color: #d84a38; margin-right: 8px; padding: 5px; font-size: 13px; }
 #top-menu #account ul li a:hover { background-color: #bb2413 !important; }
@@ -47,7 +47,9 @@ h1, h2, h3, h4, h5, h6, h7 { font-family: "Open Sans", Verdana, sans-serif; font
 #top-menu a:hover { color: #EEE; text-decoration: none; }
 
 div.flash { border: 1px solid; }
-div#content > div.flash { padding: 9px 35px 10px; margin: -5px -10px 1px -10px; background-position-x: 12px !important; background-position-y: 9px !important; position: relative; border-bottom: 1px solid #AECCD7; }
+
+
+div#content > div.flash { padding: 9px 35px 10px; margin: -5px -10px 1px -10px; background-position-x: 12px !important; background-position-y: 9px !important; position: relative;  }
 
 div#content { border-right: 0 none transparent; }
 #errorExplanation, div.flash, .nodata, .warning, .conflict { padding: 8px 35px 8px 14px; margin-bottom: 20px; font-size: 1.1em; border: 1px solid; }
@@ -119,7 +121,7 @@ div.contact.details, div.deal.details { padding: 15px !important; margin: -11px 
 
 #sidebar h3 { color: #fff;
 background: #dd4814;
-margin: 10px -10px 5px -15px;
+margin: 0px -10px 15px -15px;
 padding: 5px 10px; }
 
 #sidebar h3:first-child { margin-top: 0px; }
@@ -127,12 +129,13 @@ padding: 5px 10px; }
 #footer { background-color: #000000; border: 0px; color: #fff; margin-top: 45px; padding: 15px; }
 #footer a { color: #fff; }
 #footer a:hover { color: #eee; }
-#footer .bgl .bgr:after { content: " and fedmine theme"; }
+#footer .bgl .bgr:after { content: " and fedmine from Froiden"; }
 h2, h3, h4 { border-bottom: 0px; }
 
-.wiki h1, .wiki h2, .wiki h3 { border-bottom: 0px; }
-.wiki.wiki-page h1 { border-bottom: 1px solid #ccc; }
-.wiki.wiki-page > h2 { border-bottom: 1px solid #ccc; padding-bottom: 6px; }
+.wiki h1, .wiki h2, .wiki h3 { border-bottom: 0px; margin-top: 20px;}
+.wiki.wiki-page h1 { border-bottom: 1px solid #ccc; padding-bottom: 0px; }
+.wiki.wiki-page > h2 { border-bottom: 1px solid #ccc; }
+.wiki.wiki-page > h3 { font-weight: bold; font-size: 14px;}
 
 #main-menu { left: 15px; width: 100%; background: transparent; margin-right: 0; position: relative; }
 #main-menu ul { *zoom: 1; margin-top: 0; padding-left: 0; background-color: transparent !important; }
@@ -141,7 +144,7 @@ h2, h3, h4 { border-bottom: 0px; }
 #main-menu ul li { margin: 0; padding: 0; }
 #main-menu ul li a { background-color: #DD4814; display: block; float: left; padding: 5px 12px; color: #FFFFFF; font-weight: bold; text-decoration: none; height: 20px; }
 #main-menu ul li a.selected { color: #FFFFFF; background-color: #000; }
-#main-menu ul li a.selected:hover { background-color: #222; }
+#main-menu ul li a.selected:hover { background-color: #000; color: #eee; }
 #main-menu ul li a:hover { color: #FFF; background-color: #000; }
 
 table.list tbody td, table.list tbody tr:hover td { border: 0px none transparent; }
@@ -149,11 +152,11 @@ table.list tbody td, table.list tbody tr:hover td { border: 0px none transparent
 table.list thead th { 
 border-width: 1px;
 border-style: solid;
-border-top-color: #DD4814;
-border-right-color: #dd4814;
-border-left-color: #dd4814;
-border-bottom-color: #dd4814;
-background: #dd4814;
+border-top-color: #27AE60;
+border-right-color: #27AE60;
+border-left-color: #27AE60;
+border-bottom-color: #27AE60;
+background: #27AE60;
 color: #FFF;
 font-weight: normal;
 font-size: 15px;
@@ -372,17 +375,17 @@ option { border-bottom: 1px dotted #ddd; }
 .controller-messages.action-show .message.reply { padding: 0px 10px; margin: -1px; background: white; border: 1px solid #D9D9D9; }
 .controller-messages.action-show .message .contextual { margin-top: 10px; }
 
-.controller-boards p.breadcrumb { position: relative; background: white; border: 0px solid; padding: 9px 13px 10px; margin: -5px -10px 1px -10px; background-position-x: 12px !important; background-position-y: 9px !important; -webkit-border-top-left-radius: 8px; -moz-border-radius-topleft: 8px; border-top-left-radius: 8px; -webkit-border-top-right-radius: 8px; -moz-border-radius-topright: 8px; border-top-right-radius: 8px; position: relative; border-bottom: 1px solid #AECCD7; }
+.controller-boards p.breadcrumb { position: relative; background: #f9f9f9; border: 0px solid; padding: 9px 13px 10px; margin: -5px -10px 1px -10px; background-position-x: 12px !important; background-position-y: 9px !important; position: relative; margin-bottom: 10px;}
 
 #add-news, #add-message, #add-document { background-color: white; position: relative; margin: -5px -10px 1px -10px; padding: 5px 10px 10px;}
 
 .box { background-color: #FFFFFF;
 padding: 0px;
-border: 1px solid #dd4814;
-padding-bottom: 10px;}
+border: 1px solid #3498DB;
+padding-bottom: 15px;}
 
 .box h3 { padding: 5px 20px !important;
-background: #DD4814 !important;
+background: #3498DB !important;
 color: #fff;
 text-transform: capitalize;}
 
@@ -427,11 +430,11 @@ div.modal h3.title { background: transparent; color: inherit; }
 #modalbg { background: white; opacity: 0.75; }
 
 body.action-login #content, body.action-login #main.nosidebar #content { background: inherit; border: 0px; box-shadow: none; }
-body.action-login #login-form table { padding: 3em; background: white; -webkit-box-shadow: 0 0 3px #cccccc; -moz-box-shadow: 0 0 3px #cccccc; box-shadow: 0 0 3px #cccccc; border: 1px solid #ddd; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; }
+body.action-login #login-form table { padding: 3em; background: white; border: 1px solid #dd4814; }
 
 #login-form input#username, #login-form input#password { outline: none; margin: 0px; border: 1px solid #ccc; padding: 6px; font-size: 140%; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
 
-.controller-account.action-login div.flash, div.wiki div.flash { -webkit-box-shadow: 0 0 3px #cccccc; -moz-box-shadow: 0 0 3px #cccccc; box-shadow: 0 0 3px #cccccc; border: 1px solid #ddd !important; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; margin: 5px; }
+.controller-account.action-login div.flash, div.wiki div.flash { margin: 5px; }
 
 #content .tabs ul li a { 
 display: block;
@@ -518,3 +521,29 @@ input#content_comments {
 }
 
 textarea#issue_notes, textarea#message_content, textarea#content_text { margin-left: 0px !important; }
+
+/* element specific fixes */
+.news > a { padding-left: 20px; }
+
+/* width fixes */
+#user_login, #user_firstname, #user_lastname, #user_mail, #my_account_form select, #user_form select, #user_identity_url {
+	width: 50%;
+}
+
+.tabular.settings textarea {
+	width: 98%;
+}
+
+.settings .wiki-edit { margin-left: 4px !important; }
+.enabled_scm table th { text-align: left; }
+.enabled_scm { padding-left: 20px; }
+.info {padding-left: 6px; }
+.commit-keywords:hover { background-color: #ffffff !important; }
+.delete-commit-keywords { top: 10px; position: relative;}
+.query-columns {margin-left: 20px; }
+.tabular label.floating { width: 200px; margin-left: 20px; }
+table.boards td.last-message {
+font-size: 100%;
+}
+
+.wiki { border-bottom: 1px solid #ddd; }
