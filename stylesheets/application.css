@@ -241,7 +241,7 @@ tr.odd.priority-lowest td, tr.even.priority-lowest td { border-color: #add7f3; }
 /*input[type="button"], input[type="submit"], input[type="reset"] { background-color: #f2f2f2; color: #222222; border: 1px outset #cccccc; }
 input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover { background-color: #ccccbb; }
 */
-.button, input[type="submit"], input[type="button"], #quick-search label a { 
+.button, input[type="submit"], input[type="button"], #quick-search label a, button { 
 
 color: white;
 text-shadow: none;
@@ -264,14 +264,14 @@ border-radius: 0 !important;
 -moz-text-shadow: none;
 text-shadow: none;
 }
-.button:hover, input[type="submit"]:hover, input[type="button"]:hover , .button:active, input[type="submit"]:active , #quick-search label a:hover {
+.button:hover, input[type="submit"]:hover, input[type="button"]:hover , .button:active, input[type="submit"]:active , #quick-search label a:hover, button:hover {
 
 background-color: #bb2413 !important;
 color: #fff !important;
 text-decoration: none;
  }
  
-.button:disabled, input[type="submit"]:disabled, .button:disabled:hover, input[type="submit"]:disabled:hover, .button[disabled], input[disabled][type="submit"], .button[disabled]:hover, input[disabled][type="submit"]:hover 
+.button:disabled, button:disabled, input[type="submit"]:disabled, .button:disabled:hover, input[type="submit"]:disabled:hover, .button[disabled], input[disabled][type="submit"], .button[disabled]:hover, input[disabled][type="submit"]:hover 
 { 
 
 cursor: default;
@@ -334,7 +334,7 @@ outline: none;
 height: 34px !important;
 line-height: 30px;
 padding: 4px 6px;
-margin-bottom: 10px;
+margin-bottom:4px;
 color: #555;
 vertical-align: middle;
 }
@@ -546,4 +546,14 @@ table.boards td.last-message {
 font-size: 100%;
 }
 
+/* fix for green check button on green background in table head */
+.list tr th.checkbox a { background-color: white; padding: 0 5px 0 5px;  }
+.list tr th a.sort.desc { background: url(../images/icons.png) 9px -25px no-repeat; }
+.list tr th a.sort.asc { background: url(../images/icons.png) 10px -50px no-repeat; }
 .wiki { border-bottom: 1px solid #ddd; }
+
+/* Fixes for Scrum2b plugin. Issue #1 */
+#div_screen_board .box { border: 0px none transparent; }
+.filter { clear: both; height: 40px; }
+#check_all img { background-color: white; padding: 5px 5px 5px 5px;  }
+.btn_submit_board { margin-top: -15px !important; }
