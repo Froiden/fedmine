@@ -1,5 +1,5 @@
 @import url(../../../stylesheets/rtl.css);
-div#content > h2, div#content h2.contacts_header {text-align: right !important;}
+/*div#content > h2, div#content h2.contacts_header {text-align: right !important;}
 div.issue div.subject h3 {text-align: right !important;}
 .splitcontentright {padding-right: 500px !important;}
 .box h3 {text-align: right !important;}
@@ -11,3 +11,17 @@ div#content > h2, div#content h2.contacts_header {padding-left: 700px !important
 div#content > h2, div#content h2.contacts_header {padding-left: 700px !important;}
 #admin-menu li {text-align: right !important;}
 .splitcontentright {margin-top: 79px !important;}
+*/
+#top-menu {
+	background-image: url(../images/ghasedak-logo.png);
+	background-position: 850px 5px;
+}
+.splitcontentright {
+padding-left: 40em;
+}
+.box h3 {
+text-align: -webkit-center;
+}
+#admin-menu a {
+background-position : 99% 44% !important;
+}
