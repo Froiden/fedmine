@@ -49,3 +49,26 @@ div#main.nosidebar div#content {
 	margin-left: 0;
 	margin-right: 20px;
 }
+
+.tabular label {
+margin-left: -75px;
+margin-right: 0px;
+}
+.tabular label {
+text-align: right;
+}
+.tabular input, .tabular select, textarea.text_cf {
+float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
