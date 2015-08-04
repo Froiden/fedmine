@@ -20,8 +20,30 @@ div#content > h2, div#content h2.contacts_header {padding-left: 700px !important
 padding-left: 40em;
 }
 .box h3 {
-text-align: -webkit-center;
+text-align: center;
 }
 #admin-menu a {
-background-position : 99% 44% !important;
+background-position : 99% 44%;
+}
+div#content {
+	margin-right: auto;
+	margin-left: 300px;
+}
+div#main.nosidebar div#content {
+	margin-left: 0;
+}
+
+.tabular p {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.tabular label {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.tabular label.floating {
+	margin-left: 0;
+	margin-right: 20px;
 }
