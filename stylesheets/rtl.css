@@ -16,9 +16,11 @@ div#content > h2, div#content h2.contacts_header {padding-left: 700px !important
 	background-image: url(../images/ghasedak-logo.png);
 	background-position: center center;
 }
+/*
 .splitcontentright {
 padding-left: 40em;
 }
+*/
 .box h3 {
 text-align: center;
 }
