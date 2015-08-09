@@ -164,7 +164,13 @@ padding: 5px;
 table.list thead th a{ color: #fff !important; }
 
 .odd { background: #f9f9f9; }
-.tabular label { padding-top: 8px; margin-left: 0px; margin-right: 10px;}
+
+.tabular label {
+  padding-top: 8px;
+  margin-left: 0px;
+  margin-right: 10px;
+  width: auto !important;
+}
 
 tr.assigned-to-me td.assigned_to, tr.created-by-me td.author { font-weight: bold; }
 
