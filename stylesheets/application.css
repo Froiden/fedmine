@@ -1,37 +1,37 @@
 @import url(../../../stylesheets/application.css);
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'B Nazanin';
   font-style: normal;
   font-weight: 300;
-  src: local('Open Sans Light'), local('OpenSans-Light'), url(fonts/sans/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+  src: local('B Nazanin Light'), local('BNazanin-Light'), url(fonts/B_Nazanin/B Nazanin+ Regular.ttf) format('ttf');
 }
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'B Nazanin';
   font-style: normal;
   font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(fonts/sans/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+  src: local('B Nazanin'), local('BNazanin'), url(fonts/B_Nazanin/B Nazanin+ Regular.ttf) format('ttf');
 }
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'B Nazanin';
   font-style: italic;
   font-weight: 300;
-  src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url(fonts/sans/PRmiXeptR36kaC0GEAetxh_xHqYgAV9Bl_ZQbYUxnQU.woff) format('woff');
+  src: local('B Nazanin Light Italic'), local('BNazaninLight-Italic'), url(fonts/B_Nazanin/B Nazanin+ Bold.ttf) format('ttf');
 }
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'B Nazanin';
   font-style: italic;
   font-weight: 400;
-  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(fonts/sans/xjAJXh38I15wypJXxuGMBobN6UDyHWBl620a-IRfuBk.woff) format('woff');
+  src: local('B Nazanin Italic'), local('BNazanin-Italic'), url(fonts/B_Nazanin/B Nazanin+ Black.ttf) format('ttf');
 }
 
-body { font-family: "Open Sans", Helvetica, arial, sans-serif; font-size: 13px; color: #333333; background-color: #fff; line-height: 1.4; overflow-x: hidden; }
+body { font-family:'B Nazanin',tahoma, arial; font-size: 13px; color: #333333; background-color: #fff; line-height: 1.4; overflow-x: hidden; }
 
-h1, h2, h3, h4, h5, h6, h7 { font-family: "Open Sans", Verdana, sans-serif; font-weight: normal;}
+h1, h2, h3, h4, h5, h6, h7 { font-family:'B Nazanin',tahoma, arial; font-weight: normal;}
 
 #header { font-size: 13px; background: #FFFFFF; padding: 0px; height: auto; min-height: 0; }
 #header a { color: #000000; }
-#header > h1 { font-family: "Open Sans"; font-weight: normal; padding: 10px 20px; color: #000000; margin: 0;}
+#header > h1 { font-family: "B Nazanin"; font-weight: normal; padding: 10px 20px; color: #000000; margin: 0;}
 
 #main { background: transparent; margin: 15px 15px 0px 15px; background-color: #fff; }
 
@@ -180,7 +180,7 @@ display: inline-block;}
 
 table.list td { padding: 6px 20px !important; }
 table.list input[type="checkbox"] { margin-top: 6px; }
-table.list tbody tr.group span.count { padding: 0 9px 1px 9px; -webkit-border-radius: 9px; -moz-border-radius: 9px; border-radius: 9px; background-color: #999999; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); font-weight: bold; font-size: 11.844px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 14px; }
+table.list tbody tr.group span.count { padding: 0 9px 1px 9px; -webkit-border-radius: 9px; -moz-border-radius: 9px; border-radius: 9px; background-color: #999999; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); font-weight: bold; font-size: 11.844px; font-family:'B Nazanin',tahoma, arial; line-height: 14px; }
 table.list tbody tr:hover { background-color: #EFF5F8; }
 table.list tr.issue a { color: #666; }
 table.list tr th a { color: #444; }
@@ -254,7 +254,7 @@ background-image: none;
 filter: none;
 border: 0;
 padding: 7px 14px;
-font-family: "Open Sans", Helvetica, Arial, sans-serif;
+font-family:'B Nazanin',tahoma, arial;
 font-size: 14px;
 cursor: pointer;
 outline: none;
@@ -329,7 +329,7 @@ border: 1px solid #888;
 }
 
 select {
-font-family: "Open Sans", Helvetica, Arial, sans-serif;
+font-family:'B Nazanin',tahoma, arial;
 background-color: #ffffff;
 background-image: none !important;
 filter: none !important;
@@ -359,7 +359,7 @@ cursor: not-allowed;
 background-color: #F4F4F4 !important;
 }
 textarea.wiki-edit { width: 78%; margin-left: 184px !important;
-font-family: "Open Sans", Helvetica, Arial, sans-serif;
+font-family:'B Nazanin',tahoma, arial;
 background-color: #ffffff;
 background-image: none !important;
 filter: none !important;
