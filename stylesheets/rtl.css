@@ -53,6 +53,11 @@ div#main.nosidebar div#content {
 .tabular label {
 	text-align: right;
 }
+
+.wiki pre {
+	direction: ltr;
+}
+
 /*
 .tabular label {
 margin-left: -75px;
