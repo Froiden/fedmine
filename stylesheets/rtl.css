@@ -12,6 +12,19 @@ div#content > h2, div#content h2.contacts_header {padding-left: 700px !important
 #admin-menu li {text-align: right !important;}
 .splitcontentright {margin-top: 79px !important;}
 */
+
+@font-face {
+	font-family: 'Mirza';
+	src: local('Mirza'), url('../fonts/mirza/Mirza.ttf') format('ttf');
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Mirza-Bold';
+	src: local('Mirza-Bold'), url('../fonts/mirza/Mirza-Bold.ttf') format('ttf');
+	font-style: normal;
+}
+
 #top-menu {
 	background-image: url(../images/custom-logo.png);
 	background-position: center center;
@@ -22,10 +35,10 @@ padding-left: 40em;
 }
 */
 .box h3 {
-text-align: center;
+	text-align: center;
 }
 #admin-menu a {
-background-position : 99% 44%;
+	background-position : 99% 44%;
 }
 div#content {
 	margin-right: auto;
@@ -58,6 +71,18 @@ div#main.nosidebar div#content {
 	direction: ltr;
 }
 
+#header > h1, h1, h2, h3 {
+	font-family: 'Mirza-Bold', Tahoma, Geneva, sans-serif;
+}
+
+body, h4, h5, h6, h7, table.list tbody tr.group span.count, .button, input[type="submit"], input[type="button"], #quick-search label a, button, select, textarea.wiki-edit {
+	font-family: 'Mirza', Tahoma, Geneva, sans-serif;
+}
+
+.tabular label {
+	width: auto !important;
+}
+
 /*
 .tabular label {
 margin-left: -75px;
@@ -67,14 +92,3 @@ margin-right: 0px;
 float: left;
 }
 */
-
-
-
-
-
-
-
-
-
-
-
