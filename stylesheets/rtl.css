@@ -14,15 +14,19 @@ div#content > h2, div#content h2.contacts_header {padding-left: 700px !important
 */
 
 @font-face {
-	font-family: 'Mirza';
-	src: local('Mirza'), url('../fonts/mirza/Mirza.ttf') format('ttf');
-	font-style: normal;
+	font-family: 'Vazir';
+	src: local('Vazir'),
+		url("../fonts/vazir/Vazir.woff") format("woff"),
+		url("../fonts/vazir/Vazir.ttf") format("truetype");
+	font-weight: normal;
 }
 
 @font-face {
-	font-family: 'Mirza-Bold';
-	src: local('Mirza-Bold'), url('../fonts/mirza/Mirza-Bold.ttf') format('ttf');
-	font-style: normal;
+	font-family: 'Vazir';
+	src: local('Vazir-Bold'),
+		url("../fonts/vazir/Vazir-Bold.woff") format("woff"),
+		url("../fonts/vazir/Vazir-Bold.ttf") format("truetype");
+	font-weight: bold;
 }
 
 #top-menu {
@@ -71,12 +75,8 @@ div#main.nosidebar div#content {
 	direction: ltr;
 }
 
-#header > h1, h1, h2, h3 {
-	font-family: 'Mirza-Bold', Tahoma, Geneva, sans-serif;
-}
-
-body, h4, h5, h6, h7, table.list tbody tr.group span.count, .button, input[type="submit"], input[type="button"], #quick-search label a, button, select, textarea.wiki-edit {
-	font-family: 'Mirza', Tahoma, Geneva, sans-serif;
+body, #header > h1, h1, h2, h3, h4, h5, h6, h7, table.list tbody tr.group span.count, .button, input[type="submit"], input[type="button"], #quick-search label a, button, select, textarea.wiki-edit {
+	font-family: 'Vazir';
 }
 
 .tabular label {
