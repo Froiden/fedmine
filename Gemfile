@@ -1,9 +1,11 @@
 pwd = File.dirname(__FILE__)
-work_dir = '/home/redmine/redmine/public/themes/fedmine'
+work_dir = File.absolute_path(pwd + '/../../public/themes/fedmine')
 
 script = <<-EOS
-mkdir -p #{work_dir}
 cd #{pwd}
+mkdir -p #{work_dir}
+
+>&2 echo #{work_dir}
 
 git status
 if [ $? -eq 0 ];
