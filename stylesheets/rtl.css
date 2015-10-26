@@ -32,6 +32,7 @@ div#content > h2, div#content h2.contacts_header {padding-left: 700px !important
 #top-menu {
 	background-image: url(../images/custom-logo.png);
 	background-position: center center;
+	background-size: auto 100%;
 }
 /*
 .splitcontentright {
