@@ -20,6 +20,10 @@ else
 	script << "cp -r . #{work_dir}\n"
 end
 
-script << "cp #{work_dir}/images/logo.png #{work_dir}/images/custom-logo.png\n"
+script << <<-EOS
+if [ ! -f #{work_dir}/images/custom-logo.png ]; then
+	cp #{work_dir}/images/logo.png #{work_dir}/images/custom-logo.png
+fi
+EOS
 
 system(script)

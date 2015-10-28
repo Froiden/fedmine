@@ -2,12 +2,6 @@ module Fedmine
 	module SettingsControllerPatch
 		def self.included(base)
 			base.send(:before_filter, :upload_logo, :only => :plugin)
-
-			# base.send(:include, InstanceMethods)
-			# base.class_eval do
-			# 	unloadable
-			# 	alias_method_chain :plugin, :fedmine
-			# end
 		end
 
 		def upload_logo
