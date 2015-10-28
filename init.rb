@@ -1,4 +1,5 @@
 require 'redmine'
+require 'fedmine/settings_controller_patch'
 
 Rails.application.config.to_prepare do
 end
@@ -13,4 +14,9 @@ Redmine::Plugin.register :fedmine do
 	author_url 'https://github.com/pouyanh'
 
 	settings(:partial => 'settings/fedmine')
+
+	Rails.configuration.to_prepare do
+		# This tells the Redmine version's controller to include the module from the file above.
+		SettingsController.send(:include, Fedmine::SettingsControllerPatch)
+    end
 end
