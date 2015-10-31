@@ -1,0 +1,95 @@
+@import url(../../../stylesheets/rtl.css);
+/*div#content > h2, div#content h2.contacts_header {text-align: right !important;}
+div.issue div.subject h3 {text-align: right !important;}
+.splitcontentright {padding-right: 500px !important;}
+.box h3 {text-align: right !important;}
+.box {text-align: right !important;}
+div#content > h2, div#content h2.contacts_header {text-align: right !important;}
+h2, h3, h4 {text-align: right !important;}
+#sidebar {margin-top: 81px !important;}
+div#content > h2, div#content h2.contacts_header {padding-left: 700px !important;}
+div#content > h2, div#content h2.contacts_header {padding-left: 700px !important;}
+#admin-menu li {text-align: right !important;}
+.splitcontentright {margin-top: 79px !important;}
+*/
+
+@font-face {
+	font-family: 'Vazir';
+	src: local('Vazir'),
+		url("../fonts/vazir/Vazir.woff") format("woff"),
+		url("../fonts/vazir/Vazir.ttf") format("truetype");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Vazir';
+	src: local('Vazir-Bold'),
+		url("../fonts/vazir/Vazir-Bold.woff") format("woff"),
+		url("../fonts/vazir/Vazir-Bold.ttf") format("truetype");
+	font-weight: bold;
+}
+
+#top-menu {
+	background-image: url(../images/custom-logo.png);
+	background-position: center center;
+	background-size: auto 100%;
+}
+/*
+.splitcontentright {
+padding-left: 40em;
+}
+*/
+.box h3 {
+	text-align: center;
+}
+#admin-menu a {
+	background-position : 99% 44%;
+}
+div#content {
+	margin-right: auto;
+	margin-left: 300px;
+}
+div#main.nosidebar div#content {
+	margin-left: 0;
+}
+
+.tabular p {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.tabular label {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.tabular label.floating {
+	margin-left: 0;
+	margin-right: 20px;
+}
+
+.tabular label {
+	text-align: right;
+}
+
+.wiki pre {
+	direction: ltr;
+}
+
+body, #header > h1, h1, h2, h3, h4, h5, h6, h7, table.list tbody tr.group span.count, .button, input[type="submit"], input[type="button"], #quick-search label a, button, select, textarea.wiki-edit {
+	font-family: 'Vazir';
+}
+
+.tabular label {
+	width: auto !important;
+}
+
+/*
+.tabular label {
+margin-left: -75px;
+margin-right: 0px;
+}
+.tabular input, .tabular select, textarea.text_cf {
+float: left;
+}
+*/

@@ -1,0 +1,51 @@
+<p>
+  <%= content_tag :label, l(:fedmine_logo) + ':' %>
+  <%= file_field_tag "settings[logo]" %>
+  <%= image_tag "/themes/fedmine/images/custom-logo.png", :style => "background: #000; height: 40px; width: auto;" %>
+</p>
+
+<%= javascript_tag do %>
+	function supportAjaxUploadWithProgress() {
+		return supportFileAPI() && supportAjaxUploadProgressEvents() && supportFormData();
+
+		function supportFileAPI() {
+			var fi = document.createElement('INPUT');
+			fi.type = 'file';
+			return 'files' in fi; 
+		};  
+
+		function supportAjaxUploadProgressEvents() {
+			var xhr = new XMLHttpRequest();
+			return !! (xhr && ('upload' in xhr) && ('onprogress' in xhr.upload));
+		};  
+
+		function supportFormData() {
+			return !! window.FormData;
+		}
+	}
+
+	$("form[action='/settings/plugin/fedmine']").submit(
+		function (eData) {
+			if (!this.dataset['posted']) {
+				if (supportAjaxUploadWithProgress()) {
+					eData.preventDefault();
+					var frmData = new FormData(this);
+
+					var xhr = new XMLHttpRequest();
+					xhr.onreadystatechange = (function (request) {
+						if (request.target.readyState == 4 && request.target.status == 200) {
+							this.dataset['posted'] = true;
+							this.submit();
+						}
+					}).bind(this);
+					xhr.open('POST', this.getAttribute('action'), true);
+					xhr.send(frmData);
+
+					return false;
+				} else {
+					this.enctype = "multipart/form-data";
+				}
+			}
+		}
+	);
+<% end %>
