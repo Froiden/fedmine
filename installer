@@ -25,19 +25,38 @@ else
 	for module in $modules;
 	do
 		IFS=' ' read -ra repo <<< $module
-		path=$work_dir/${repo[0]}
-		url=${repo[1]}"/archive/master.zip"
+		api_url=${repo[1]/https:\/\/github.com/https:\/\/api.github.com\/repos}"/commits"
+		repo_sfn=${repo[0]/\//_}.commits
+		checksums=$pwd/SHA256SUMS
+		api=${DLAPP/__OUT__/\/tmp\/$repo_sfn}
+		api=${api/__URL__/$api_url}
+		eval $api
 
-		mkdir -p $path
+		if [ ! -f $checksums ] || [ ! `grep $repo_sfn $checksums` ]; then
+			echo `sha256sum /dev/null | awk '{print $1}'`" /tmp/$repo_sfn" >> $checksums
+		fi
 
-		download=${DLAPP/__OUT__/$path.zip}
-		download=${download/__URL__/$url}
+		if ! `sha256sum --strict --status -c $checksums`;
+		then
+			path=$work_dir/${repo[0]}
+			url=${repo[1]}"/archive/master.zip"
 
-		mkdir -p $path
-		eval $download
-		unzip -o $path.zip -d $path
-		mv $path/*/* $path
-		rm $path.zip
+			mkdir -p $path
+
+			download=${DLAPP/__OUT__/$path.zip}
+			download=${download/__URL__/$url}
+
+			mkdir -p $path
+			eval $download
+			unzip -o $path.zip -d $path
+			mv $path/*/* $path
+			rm $path.zip
+		fi
+
+		old_checksum=`grep $repo_sfn $checksums | awk '{print $1}'`
+		new_checksum=`sha256sum /tmp/$repo_sfn | awk '{print $1}'`
+		sed -i "s/$old_checksum/$new_checksum/" $checksums
+		rm /tmp/$repo_sfn
 	done
 	cp -r . $work_dir
 fi
