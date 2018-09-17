@@ -3,17 +3,20 @@
 pwd=$1
 work_dir=$2
 
+mkdir -p $work_dir
 cd $pwd
 
-if [ `which git` ] && [ `git rev-parse` ];
+if [ `which git` ] && [ `git rev-parse HEAD` ];
 then
 	git submodule update --init
 	git submodule update --remote
 	GIT_WORK_TREE=$work_dir git checkout -f HEAD
 else
-	if [ `which curl` ]; then
+	if [ `which curl` ];
+	then
 		DLAPP=`which curl`" -L -o __OUT__ __URL__"
-	elif [ `which wget` ]; then
+	elif [ `which wget` ];
+	then
 		DLAPP=`which wget`" --progress=dot -O __OUT__ __URL__"
 	else
 		exit 1
@@ -58,7 +61,7 @@ else
 		sed -i "s/$old_checksum/$new_checksum/" $checksums
 		rm /tmp/$repo_sfn
 	done
-	cp -r . $work_dir
+	cp -r . $work_dir/
 fi
 
 if [ ! -f $work_dir/images/custom-logo.png ]; then
