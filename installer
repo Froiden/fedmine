@@ -7,11 +7,11 @@ mkdir -p $work_dir
 cd $pwd
 
 if [ `which git` ] && [ `git rev-parse HEAD` ]; then
-	git submodule deinit --all --force
-  git submodule sync
-	git submodule update --init
-  git submodule foreach git checkout master
-  git submodule foreach git pull origin master
+    git submodule deinit --all --force
+    git submodule sync
+    git submodule update --init
+    git submodule foreach git checkout master
+    git submodule foreach git pull origin master
 else
 	if [ `which curl` ]; then
 		DLAPP=`which curl`" -L -o __OUT__ __URL__"
