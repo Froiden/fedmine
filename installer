@@ -12,8 +12,6 @@ if [ `which git` ] && [ `git rev-parse HEAD` ]; then
 	git submodule update --init
   git submodule foreach git checkout master
   git submodule foreach git pull origin master
-	#git --work-tree=$work_dir checkout -f --recurse-submodules HEAD
-  git --work-tree=$work_dir checkout -f --recurse-submodules
 else
 	if [ `which curl` ]; then
 		DLAPP=`which curl`" -L -o __OUT__ __URL__"
@@ -61,8 +59,9 @@ else
 		sed -i "s/$old_checksum/$new_checksum/" $checksums
 		rm /tmp/$repo_sfn
 	done
-	cp -r . $work_dir/
 fi
+
+cp -r . $work_dir/
 
 if [ ! -f $work_dir/images/custom-logo.png ]; then
 	cp $work_dir/images/logo.png $work_dir/images/custom-logo.png
