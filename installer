@@ -8,8 +8,8 @@ cd $pwd
 
 if [ `which git` ] && [ `git rev-parse HEAD` ];
 then
-	git submodule update --init
-	git submodule update --remote
+	git submodule deinit --all --force
+	git submodule update --init --remote --recursive --force
 	GIT_WORK_TREE=$work_dir git checkout -f --recurse-submodules HEAD
 else
 	if [ `which curl` ];
