@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6, h7 { font-family: "Open Sans", Verdana, sans-serif; font
 
 #main { background: transparent; margin: 15px 15px 0px 15px; background-color: #fff; }
 
-#top-menu { font-size: 14px; padding: 0px 0px 0px 220px; height: 40px; background: #000 url(../images/logo.png) 10px 5px no-repeat;}
+#top-menu { font-size: 14px; padding: 0px 0px 0px 220px; height: 40px; background: #000 url(../images/custom-logo.png) 10px 5px no-repeat;}
 #top-menu #loggedas { display: none; color: #FFF; padding: 11px 0 11px 5px; margin: 0; background-color: #E02222; border-left: 2px solid #DD4814; }
 #top-menu #account ul li a { background-color: #d84a38; margin-right: 8px; padding: 5px; font-size: 13px; }
 #top-menu #account ul li a:hover { background-color: #bb2413 !important; }
