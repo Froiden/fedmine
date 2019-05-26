@@ -1,7 +1,7 @@
 module Fedmine
 	module SettingsControllerPatch
 		def self.included(base)
-			base.send(:before_filter, :upload_logo, :only => :plugin)
+			base.send(:before_action, :upload_logo, :only => :plugin)
 		end
 
 		def upload_logo
