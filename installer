@@ -6,20 +6,18 @@ work_dir=$2
 mkdir -p $work_dir
 cd $pwd
 
-if [ `which git` ] && [ `git rev-parse HEAD` ];
-then
+if [ `which git` ] && [ `git rev-parse HEAD` ]; then
 	git submodule deinit --all --force
   git submodule sync
 	git submodule update --init
   git submodule foreach git checkout master
   git submodule foreach git pull origin master
-	GIT_WORK_TREE=$work_dir git checkout -f --recurse-submodules HEAD
+	#git --work-tree=$work_dir checkout -f --recurse-submodules HEAD
+  git --work-tree=$work_dir checkout -f --recurse-submodules
 else
-	if [ `which curl` ];
-	then
+	if [ `which curl` ]; then
 		DLAPP=`which curl`" -L -o __OUT__ __URL__"
-	elif [ `which wget` ];
-	then
+	elif [ `which wget` ]; then
 		DLAPP=`which wget`" --progress=dot -O __OUT__ __URL__"
 	else
 		exit 1
@@ -42,8 +40,7 @@ else
 			echo `sha256sum /dev/null | awk '{print $1}'`" /tmp/$repo_sfn" >> $checksums
 		fi
 
-		if ! `sha256sum --strict --status -c $checksums`;
-		then
+		if ! `sha256sum --strict --status -c $checksums`; then
 			path=$work_dir/${repo[0]}
 			url=${repo[1]}"/archive/master.zip"
 
